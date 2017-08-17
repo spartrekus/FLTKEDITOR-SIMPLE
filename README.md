@@ -1,0 +1,2 @@
+# FLTKEDITOR-SIMPLE
+Simple text editor aka FLTKEDITOR-SIMPLE
