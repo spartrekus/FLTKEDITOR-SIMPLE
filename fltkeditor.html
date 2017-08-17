@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta name="generator" content="HTML::TextToHTML v2.51"/>
+</head>
+<body>
+<p>//<br/>
+// "$Id$"<br/>
+//<br/>
+//      A simple example of Fl_Text_Editor
+//
+</p><pre>
+//      Fl_Text_Editor is unlike other FLTK widgets in that
+//      to work correctly, it must be assigned to an instance of an
+//      Fl_Text_Buffer.  The below shows using buffer() to connect
+//      the two classes together.
+//
+//      Note that the example can also be used to demonstrate
+//      Fl_Text_Display; just replace all instances of
+//      Fl_Text_Editor with Fl_Text_Display and rebuild.
+</pre>
+<p>//<br/>
+// Copyright 2010 Greg Ercolano.<br/>
+// Copyright 1998-2010 by Bill Spitzak and others.
+//<br/>
+// This library is free software. Distribution and use rights are outlined in
+// the file "COPYING" which should have been included with this file.  If this
+// file is missing or damaged, see the license at:
+//<br/>
+//     <a href="http://www.fltk.org/COPYING.php">http://www.fltk.org/COPYING.php</a><br/>
+//<br/>
+// Please report all bugs and problems on the following page:
+//<br/>
+//     <a href="http://www.fltk.org/str.php">http://www.fltk.org/str.php</a><br/>
+//
+</p>
+<p>#include &lt;FL/Fl.H&gt;<br/>
+#include &lt;FL/Fl_Double_Window.H&gt;<br/>
+#include &lt;FL/Fl_Text_Editor.H&gt;
+</p>
+<p>int main() {
+</p><pre>
+     Fl_Double_Window *win  = new Fl_Double_Window(640, 480, "FLTKEDITOR");
+     Fl_Text_Buffer   *buff = new Fl_Text_Buffer();
+     Fl_Text_Editor   <em>edit = new Fl_Text_Editor(20, 20, 640-40, 480-40);
+     edit-&gt;buffer(buff);                // attach the text buffer to our editor widget
+     win-&gt;resizable(</em>edit);
+     win-&gt;show();
+     buff-&gt;text("line 0\nline 1\nline 2\n"
+                "line 3\nline 4\nline 5\n"
+                "line 6\nline 7\nline 8\n"
+                "line 9\nline 10\nline 11\n"
+                "line 12\nline 13\nline 14\n"
+                "line 15\nline 16\nline 17\n"
+                "line 18\nline 19\nline 20\n"
+                "line 21\nline 22\nline 23\n");
+     return(Fl::run());
+</pre>
+<p>}
+</p>
+<p>//<br/>
+// End of "$Id$".<br/>
+//</p>
+
+</body>
+</html>
