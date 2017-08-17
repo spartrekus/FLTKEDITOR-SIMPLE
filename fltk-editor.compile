@@ -1,0 +1,4 @@
+
+g++ -L/usr/local/lib -lfltk -lXext -lX11 -lm  "texteditor-simple.cxx"  -o file.out  ; ./file.out 
+
+
