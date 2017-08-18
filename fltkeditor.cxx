@@ -36,21 +36,25 @@
 
 
 int main() {
+     
+     /// main window
      Fl_Double_Window *win  = new Fl_Double_Window(640, 480, "FLTKEDITOR");
      Fl_Text_Buffer   *buff = new Fl_Text_Buffer();
      Fl_Text_Editor   *edit = new Fl_Text_Editor(20, 60, 640-40 , 480-40 -50 );
      edit->buffer(buff);		// attach the text buffer to our editor widget
      
-     
+     // addon with buttons
      int x = 20 ; int y = 20 ; int width = 100; int height = 30 ; 
      Fl_Button *button1 = new Fl_Button(x, y, width, height, "Open");
      Fl_Button *button2 = new Fl_Button(120, y, width, height, "Save");
      Fl_Light_Button *lbutton = new Fl_Light_Button(250 , y, width, height, "Active" );
      Fl_Round_Button *rbutton = new Fl_Round_Button(350 , y, width, height, "Active");
      
-     
+     // add some stuffs for the window (paras,...)
      win->resizable(*edit);
      win->show();
+     
+     //  input the text
      buff->text("line 0\nline 1\nline 2\n"
                 "line 3\nline 4\nline 5\n"
                 "line 6\nline 7\nline 8\n"
@@ -59,6 +63,7 @@ int main() {
                 "line 15\nline 16\nline 17\n"
                 "line 18\nline 19\nline 20\n"
                 "line 21\nline 22\nline 23\n");
+		
      return(Fl::run());
 }
 
